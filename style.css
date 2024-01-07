@@ -1,0 +1,318 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* body {
+    height: 200vh;
+} */
+
+
+
+
+a,
+button {
+    cursor: pointer;
+}
+
+input {
+    cursor: text;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+body {
+    background-color: #ffb4b6;
+}
+
+h2 {
+    color: #fb2465;
+}
+
+
+.circle i {
+    color: #ffb4b6;
+    font-size: 4rem;
+
+}
+
+.circle {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    border: 0.5rem solid #ffb4b6;
+    background-color: #fb2465;
+    transition: all 0.5s;
+}
+
+
+.title {
+    color: #ffb4b6;
+}
+
+input {
+    transition: all 0.5s;
+    caret-color: #fb2465;
+    border: 1px solid #ffb4b6 !important;
+}
+
+input:focus {
+    box-shadow: none !important;
+    outline: solid 1px #fb2465 !important;
+    border: none;
+
+}
+
+input::placeholder {
+    color: #ffb4b6 !important;
+}
+
+.loginBtn {
+    background-color: #fb2465;
+    color: white;
+}
+
+.loginBtn:hover {
+    background-color: #fb2465;
+    color: white;
+}
+
+.loginBtn:active {
+    background-color: #fb2465 !important;
+    color: white !important;
+}
+
+.registerBtn {
+    color: #fb2465;
+    transition: all 0.5s;
+}
+
+.registerBtn:hover {
+    text-decoration: underline;
+}
+
+.fnamerror,
+.fnamerror2,
+.snamerror,
+.snamerror2,
+.mailerror,
+.mailerror2,
+.phonerror,
+.phonerror2,
+.wpd,
+.mpd,
+.passerror2,
+.repd,
+.repasserror2,
+.username {
+    color: #fb2465;
+}
+
+.wp {
+    background-color: #fb2465;
+    color: white;
+}
+
+.mp {
+    background-color: yellow;
+    color: white;
+}
+
+.sp {
+    background-color: green;
+    color: white;
+}
+
+.logoutbtn {
+    color: #fb2465;
+    border: none;
+}
+
+.logoutbtn:active {
+    color: #fb2465;
+    border: none;
+}
+
+.logoutbtn:hover {
+    color: #fb2465 !important;
+    border: none;
+}
+
+.popupmail {
+    background-color: #ffb4b6;
+    color: #fb2465;
+}
+
+.subtitle {
+    color: #ffb4b6;
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.uploaded-image {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+}
+
+
+.delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+
+#uploadInput {
+    color: #fb2465;
+    border-radius: 0.5rem;
+
+}
+
+
+
+::file-selector-button {
+    font: inherit;
+    /* -webkit-appearance: button; */
+    color: #000000;
+    background-color: #fb2465;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Add your styles for the gallery here */
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.uploaded-image-container {
+    position: relative;
+}
+
+.uploaded-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #fb2465;
+    color: #ffffff;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+#uploadButton {
+    background-color: #fb2465;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.caption {
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+
+}
+
+#boxContainer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#boxItem {
+    width: 50%;
+    height: 500px;
+    background-image: url(pic/1.jpg);
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.addimg {
+    border: #fb2465 2px solid;
+    color: #fb2465;
+}
+
+.addimg:active {
+    border: #fb2465 2px solid !important;
+    color: #fb2465 !important;
+}
+
+.addimg:hover {
+    border: #fb2465 2px solid !important;
+    color: #fb2465 !important;
+}

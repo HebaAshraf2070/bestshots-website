@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <!-- bootstrap file  -->
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Courgette&family=Nanum+Gothic&family=Pacifico&family=Roboto:ital,wght@0,300;0,400;1,100;1,700&family=Tajawal:wght@200;400&display=swap"
+        rel="stylesheet">
+    <!-- main css -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="align-middle">
+    <div id="container" class="container text-center mt-md-5 pt-md-5 mt-lg-0 pt-lg-0">
+        <div class="row d-flex align-items-center justify-content-center ">
+
+            <div class="col col-10 col-md-6 my-3 pt-3 my-md-5 py-md-5 ">
+                <h2 class="display-1 fw-bold  ">Bestshots</h2>
+                <p class="text-white fs-3">Bestshots helps you save your favorite pictures in one place!</p>
+            </div>
+
+            <!-- ////////////////////////////////////login form ///////////////////////////////////////////// -->
+
+            <div id="logForm" class=" col col-10 col-md-6 mx-auto mt-0 mb-3 my-md-5 py-3 card bg-white  border-0 ">
+                <div class="card-body">
+                    <div class="circle d-flex justify-content-center align-items-center mx-auto  ">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <h5 class="card-title title fs-2 m-3">SIGN IN</h5>
+
+                    <div id="popup" class="mb-3">
+                        <input id="emailInput" type="email" class="form-control mt-3 mt-md-5"
+                            placeholder="Email address or phone number">
+                    </div>
+                    <div class="mb-3">
+                        <input id="passInput" type="password" class="form-control mt-md-2" placeholder="password">
+                    </div>
+
+                    <a href="#" id="loginBtn" class="btn loginBtn my-2 mx-5 px-5">Sign in</a>
+                    <p id="reg" class="pt-3">Don't have an account?
+                        <a href="#" id="registerBtn" class="registerBtn px-1">Register</a>now
+                    </p>
+                    <p id="newuser" class="pt-3 d-none">The email address or mobile number you entered isn't connected
+                        to an
+                        account.
+                        <a href="#" id="registerBtn2" class="registerBtn px-1">Register</a>instead!
+                    </p>
+                </div>
+            </div>
+
+            <!-- ////////////////////////////////////////signup form////////////////////////////////////////////// -->
+
+            <div id="regForm"
+                class=" col col-10 col-md-6 mx-auto mt-0 mb-3 my-md-5 py-3 card bg-white  border-0  d-none  ">
+                <div class="card-body">
+                    <div class="circle d-flex justify-content-center align-items-center mx-auto  ">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <h5 class="card-title title fs-2 m-3">SIGN UP</h5>
+                    <div class="row">
+                        <div class="col col-6">
+                            <div class="mb-3">
+                                <input onkeyup="validusername()" type="text" class="form-control mt-3 mt-md-5 "
+                                    id="fNameInput" placeholder="First Name">
+                                <p class="fnamerror text-start ms-2 d-none">First name should not contains any special
+                                    character</p>
+                                <p class="fnamerror2 text-start ms-2  d-none ">this field is required!</p>
+
+                            </div>
+                        </div>
+                        <div class="col col-6">
+                            <div class="mb-3">
+                                <input onkeyup="validsurname()" type="text" class="form-control mt-3 mt-md-5"
+                                    id="surNameInput" placeholder="Surname">
+                                <p class="snamerror text-start ms-2  d-none"> surname should not contains any special
+                                    character</p>
+                                <p class="snamerror2 text-start ms-2  d-none ">this field is required!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input onkeyup="validMailRegs()" type="email" class="form-control mt-md-2" id="emailRegInput"
+                            placeholder="Email address">
+                        <p class="mailerror text-start ms-2  d-none">Invalid email address!</p>
+                        <p class="mailerror2 text-start ms-2  d-none ">this field is required!</p>
+                    </div>
+                    <div class="mb-3">
+                        <input onkeyup="validphoneRegs()" type="text" class="form-control mt-md-2" id="phoneInput"
+                            placeholder="phone number">
+                        <p class="phonerror text-start ms-2  d-none">Invalid phone number!</p>
+                        <p class="phonerror2 text-start ms-2  d-none ">this field is required!</p>
+                    </div>
+                    <div class="mb-3">
+                        <input onkeyup="validpass() " type="password" class="form-control mt-md-2" id="pass1RegInput"
+                            placeholder=" Enter password">
+                        <div class="errorpass d-flex flex-row justify-content-end align-items-center ">
+                            <div class="errormessage me-2  ">
+                                <p class="wp px-1 d-none ">Weak passsword</p>
+                                <p class="mp px-1 d-none">Medium passsword</p>
+                                <p class="sp px-1 d-none">Strong passsword</p>
+                            </div>
+                        </div>
+                        <p class="wpd text-start d-none">password needs to be at least 4 characters long</p>
+                        <p class="mpd text-start d-none">password needs to have at least one special character, one
+                            uppercase letter, one digit, and be at least 8 characters long</p>
+                        <p class="passerror2 text-start ms-2  d-none ">this field is required!</p>
+
+                    </div>
+                    <a href="#" id="siginUpBtn" class="btn loginBtn my-2 mx-5 px-5">Sign up</a>
+                    <p id="signinback1" class="pt-3 signinback1">Back to
+                        <a href="#" id="signBackBtn" class="registerBtn px-1">Sign in </a>page
+
+                    </p>
+                    <p id="signinback2" class="pt-3 signinback2 d-none">This email or phone number already exists
+                        <a href="#" id="signBackBtn2" class="registerBtn px-1">Sign in </a>instead!
+
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- ////////////////////////////////////////website page////////////////////////////////////////////// -->
+
+    <div class="container2 d-none">
+        <div class="container">
+            <div class="card py-3 my-2">
+                <div class="text-center ">
+                    <h2 class="display-1 fw-bold ">Bestshots</h2>
+                    <p class=" fs-3 subtitle ">save your favorite pictures in one place!</p>
+                </div>
+
+            </div>
+            <div class="card py-3 my-2">
+                <div class="row d-flex  flex-row justify-content-center  align-items-center ">
+                    <div class="col col-12 col-md-6 text-center">
+
+                        <h4 id="username" class="username px-2 py-2 ms-5 pe-5">welcome!</h4>
+                    </div>
+                    <div class="col col-12 col-md-6 text-center ">
+                        <a id="logoutbtn" class="btn logoutbtn mx-3 my-3">
+                            <i class="fa-solid fa-right-from-bracket me-1"></i>
+                            log out</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="container mx-auto ">
+            <div class="row">
+                <input class="form-control d-none" type="text" id="imageTitle" placeholder="Enter image title">
+            </div>
+            <div class="row mx-5 mt-3">
+                <button id="uploadButton" class="mx-auto text-center px-5 ">Choose Image</button>
+            </div>
+            <div class="row">
+                <input class="d-none" type="file" id="uploadInput" accept="image/*">
+
+            </div>
+            <div class="row mx-5 my-3">
+                <button class="btn addimg mx-auto text-center px-5  " onclick="uploadImage()">Add Image</button>
+            </div>
+        </div>
+
+
+
+
+
+        <div id="imgsadded" class="container">
+            <div class="card">
+                <div class="container my-5">
+                    <div class="row d-flex flex-row justify-content-center align-items-center">
+                        <div class="col col-12 col-md-4 px-5    ">
+                            <div id="gallery">
+                                <div class="item position-relative my-3">
+
+                                    <div class="item ">
+                                        <img src="" id="imgadd " class="img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- bootstrap js file -->
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- main js -->
+    <script src="main.js"></script>
+</body>
+
+</html>
